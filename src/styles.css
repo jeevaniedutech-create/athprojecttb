@@ -43,40 +43,45 @@
 }
 
 :root {
-  --radius: 0.75rem;
-  --background: oklch(0.985 0.008 85);
+  --radius: 0.5rem;
+  --background: oklch(0.985 0.005 85);
   --foreground: oklch(0.22 0.04 230);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.22 0.04 230);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.22 0.04 230);
-  --primary: oklch(0.58 0.11 215);
+  --primary: oklch(0.45 0.08 215);
   --primary-foreground: oklch(0.99 0.005 85);
-  --secondary: oklch(0.95 0.02 85);
+  --secondary: oklch(0.96 0.012 85);
   --secondary-foreground: oklch(0.22 0.04 230);
-  --muted: oklch(0.96 0.012 85);
-  --muted-foreground: oklch(0.45 0.03 230);
+  --muted: oklch(0.96 0.008 85);
+  --muted-foreground: oklch(0.5 0.02 230);
   --accent: oklch(0.78 0.14 50);
   --accent-foreground: oklch(0.18 0.03 230);
   --destructive: oklch(0.6 0.22 27);
   --destructive-foreground: oklch(0.99 0.005 85);
-  --border: oklch(0.9 0.015 85);
-  --input: oklch(0.92 0.015 85);
-  --ring: oklch(0.58 0.11 215);
+  --border: oklch(0.92 0.008 85);
+  --input: oklch(0.94 0.008 85);
+  --ring: oklch(0.45 0.08 215);
 
   /* Brand palette derived from the Athijeevana logo */
   --brand-teal: #1ea5b9;
-  --brand-teal-deep: #167a8a;
-  --brand-pink: #ec5b8a;
-  --brand-orange: #e89a3c;
-  --brand-cream: #fbf6ee;
-  --brand-ink: #16384a;
+  --brand-teal-deep: #0f5d6b;
+  --brand-pink: #d94e7a;
+  --brand-orange: #d68a36;
+  --brand-cream: #faf6ef;
+  --brand-paper: #f3ede2;
+  --brand-ink: #0e2a38;
+  --brand-ink-soft: #2c4c5b;
 
-  --gradient-brand: linear-gradient(135deg, #ec5b8a 0%, #e89a3c 50%, #1ea5b9 100%);
-  --gradient-soft: linear-gradient(180deg, #fbf6ee 0%, #ffffff 100%);
-  --shadow-luxe: 0 30px 80px -30px rgba(30, 165, 185, 0.35),
-    0 10px 30px -10px rgba(236, 91, 138, 0.18);
-  --shadow-card: 0 10px 40px -20px rgba(22, 56, 74, 0.25);
+  --gradient-brand: linear-gradient(120deg, #0f5d6b 0%, #1ea5b9 60%, #d68a36 100%);
+  --gradient-soft: linear-gradient(180deg, #faf6ef 0%, #ffffff 60%, #faf6ef 100%);
+  --gradient-hero: radial-gradient(1200px 600px at 80% -10%, rgba(30, 165, 185, 0.10), transparent 60%),
+    radial-gradient(900px 500px at -10% 20%, rgba(217, 78, 122, 0.08), transparent 60%);
+  --shadow-luxe: 0 30px 80px -40px rgba(14, 42, 56, 0.35),
+    0 8px 24px -12px rgba(14, 42, 56, 0.15);
+  --shadow-card: 0 1px 0 rgba(14, 42, 56, 0.04), 0 10px 30px -20px rgba(14, 42, 56, 0.18);
+  --shadow-hair: inset 0 0 0 1px rgba(14, 42, 56, 0.06);
 }
 
 @layer base {
@@ -89,14 +94,15 @@
     color: var(--brand-ink);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
+    font-feature-settings: "ss01", "cv11";
   }
-  h1,
-  h2,
-  h3,
-  h4 {
+  h1, h2, h3, h4 {
     font-family: var(--font-display);
-    letter-spacing: -0.01em;
+    letter-spacing: -0.015em;
+    color: var(--brand-ink);
+    font-weight: 500;
   }
+  ::selection { background: var(--brand-teal); color: white; }
 }
 
 @utility text-gradient-brand {
@@ -106,18 +112,26 @@
   color: transparent;
 }
 
-@utility bg-gradient-brand {
-  background: var(--gradient-brand);
+@utility bg-gradient-brand { background: var(--gradient-brand); }
+@utility bg-gradient-soft { background: var(--gradient-soft); }
+@utility bg-gradient-hero { background: var(--gradient-hero); }
+@utility shadow-luxe { box-shadow: var(--shadow-luxe); }
+@utility shadow-card { box-shadow: var(--shadow-card); }
+@utility shadow-hair { box-shadow: var(--shadow-hair); }
+
+@utility eyebrow {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--brand-teal-deep);
+  font-family: var(--font-sans);
 }
 
-@utility bg-gradient-soft {
-  background: var(--gradient-soft);
-}
-
-@utility shadow-luxe {
-  box-shadow: var(--shadow-luxe);
-}
-
-@utility shadow-card {
-  box-shadow: var(--shadow-card);
+@utility rule {
+  height: 1px;
+  width: 56px;
+  background: var(--brand-ink);
+  opacity: 0.25;
+  display: inline-block;
 }

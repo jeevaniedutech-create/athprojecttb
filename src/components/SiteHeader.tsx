@@ -3,23 +3,41 @@ import logoAsset from "@/assets/athijeevana-logo.png.asset.json";
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-40 backdrop-blur-md bg-[rgba(251,246,238,0.85)] border-b border-[var(--brand-cream)]">
-      <div className="mx-auto max-w-7xl px-6 py-3 flex items-center justify-between">
+    <header className="sticky top-0 z-40 backdrop-blur-xl bg-[rgba(250,246,239,0.78)] border-b border-[color:rgba(14,42,56,0.08)]">
+      <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-3">
-          <img src={logoAsset.url} alt="Athijeevana" className="h-12 w-auto" />
+          <img src={logoAsset.url} alt="Athijeevana" className="h-11 w-auto" />
+          <span className="hidden sm:flex flex-col leading-none">
+            <span className="font-display text-xl tracking-tight text-[var(--brand-ink)]">
+              Athijeevana
+            </span>
+            <span className="eyebrow mt-1 text-[0.6rem]">Heal · Rise · Live</span>
+          </span>
         </Link>
-        <nav className="flex items-center gap-2 sm:gap-6 text-sm font-medium">
+        <nav className="flex items-center gap-1 sm:gap-2 text-sm">
           <Link
             to="/"
-            className="px-3 py-2 rounded-full hover:bg-white/70 transition"
+            className="px-3 py-2 rounded-full text-[var(--brand-ink-soft)] hover:text-[var(--brand-ink)] transition"
             activeOptions={{ exact: true }}
-            activeProps={{ className: "px-3 py-2 rounded-full bg-white shadow-card" }}
+            activeProps={{ className: "px-3 py-2 rounded-full text-[var(--brand-ink)] font-medium" }}
           >
             Home
           </Link>
+          <a
+            href="/#programmes"
+            className="hidden sm:inline-block px-3 py-2 rounded-full text-[var(--brand-ink-soft)] hover:text-[var(--brand-ink)] transition"
+          >
+            Programmes
+          </a>
+          <a
+            href="/#works"
+            className="hidden sm:inline-block px-3 py-2 rounded-full text-[var(--brand-ink-soft)] hover:text-[var(--brand-ink)] transition"
+          >
+            Works
+          </a>
           <Link
             to="/verify"
-            className="px-4 py-2 rounded-full bg-gradient-brand text-white shadow-luxe hover:opacity-95 transition"
+            className="ml-2 px-4 py-2 rounded-full bg-[var(--brand-ink)] text-white hover:bg-[var(--brand-teal-deep)] transition text-xs font-medium tracking-wide"
           >
             Verify Membership
           </Link>
@@ -31,14 +49,36 @@ export function SiteHeader() {
 
 export function SiteFooter() {
   return (
-    <footer className="mt-24 border-t border-[var(--border)] bg-white/60">
-      <div className="mx-auto max-w-7xl px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <div className="flex items-center gap-3">
-          <img src={logoAsset.url} alt="Athijeevana" className="h-10 w-auto" />
+    <footer className="mt-24 border-t border-[color:rgba(14,42,56,0.1)] bg-[var(--brand-paper)]">
+      <div className="mx-auto max-w-7xl px-6 py-16 grid gap-12 md:grid-cols-4">
+        <div className="md:col-span-2">
+          <img src={logoAsset.url} alt="Athijeevana" className="h-14 w-auto" />
+          <p className="mt-5 text-sm leading-relaxed text-[var(--brand-ink-soft)] max-w-sm">
+            A community mental health and free counselling programme — built on the
+            promise that no one should suffer alone.
+          </p>
         </div>
-        <p className="text-xs text-muted-foreground">
-          © {new Date().getFullYear()} Athijeevana — Heal · Rise · Live
-        </p>
+        <div>
+          <p className="eyebrow">Explore</p>
+          <ul className="mt-4 space-y-2 text-sm text-[var(--brand-ink-soft)]">
+            <li><a href="/#about" className="hover:text-[var(--brand-ink)]">About</a></li>
+            <li><a href="/#programmes" className="hover:text-[var(--brand-ink)]">Programmes</a></li>
+            <li><a href="/#works" className="hover:text-[var(--brand-ink)]">Works</a></li>
+            <li><a href="/#contact" className="hover:text-[var(--brand-ink)]">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p className="eyebrow">Members</p>
+          <ul className="mt-4 space-y-2 text-sm text-[var(--brand-ink-soft)]">
+            <li><Link to="/verify" className="hover:text-[var(--brand-ink)]">Verify Membership</Link></li>
+          </ul>
+        </div>
+      </div>
+      <div className="border-t border-[color:rgba(14,42,56,0.08)]">
+        <div className="mx-auto max-w-7xl px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[var(--brand-ink-soft)]">
+          <p>© {new Date().getFullYear()} Athijeevana. All rights reserved.</p>
+          <p className="tracking-[0.2em] uppercase">Heal · Rise · Live</p>
+        </div>
       </div>
     </footer>
   );
