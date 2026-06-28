@@ -19,12 +19,13 @@ export const Route = createFileRoute("/")({
   component: Home,
 });
 
-const PAGE = 12;
+const PAGE = 5;
 
 function Home() {
   const [images, setImages] = useState<ImageRow[]>([]);
   const [loading, setLoading] = useState(true);
   const [visible, setVisible] = useState(PAGE);
+  const [viewMoreLoading, setViewMoreLoading] = useState(false);
 
   useEffect(() => {
     let active = true;
@@ -44,6 +45,15 @@ function Home() {
   }, []);
 
   const shown = useMemo(() => images.slice(0, visible), [images, visible]);
+
+  const handleViewMore = () => {
+    if (viewMoreLoading || visible >= images.length) return;
+    setViewMoreLoading(true);
+    setTimeout(() => {
+      setVisible((v) => v + PAGE);
+      setViewMoreLoading(false);
+    }, 3000);
+  };
 
   return (
     <div className="min-h-screen bg-[var(--brand-cream)]">
@@ -336,10 +346,11 @@ function Home() {
               {visible < images.length && (
                 <div className="mt-12 text-center">
                   <button
-                    onClick={() => setVisible((v) => v + PAGE)}
-                    className="rounded-full border border-[var(--brand-ink)] px-8 py-3 text-sm font-medium text-[var(--brand-ink)] hover:bg-[var(--brand-ink)] hover:text-white transition"
+                    onClick={handleViewMore}
+                    disabled={viewMoreLoading}
+                    className="rounded-full border border-[var(--brand-ink)] px-8 py-3 text-sm font-medium text-[var(--brand-ink)] hover:bg-[var(--brand-ink)] hover:text-white transition disabled:opacity-60 disabled:cursor-not-allowed"
                   >
-                    Load More Moments ({images.length - visible} remaining)
+                    {viewMoreLoading ? "Loading next set…" : `View More (${images.length - visible} remaining)`}
                   </button>
                 </div>
               )}
