@@ -374,7 +374,12 @@ function Home() {
             </h2>
             <p className="mt-6 text-[var(--brand-ink-soft)] leading-relaxed">
               Reach out to Jeevani Institute of Mind Care to learn more about
-              ATHIJEEVANA, become a member, or volunteer with us.
+              ATHIJEEVANA, become a member, volunteer with us, or refer someone
+              who may benefit from our support.
+            </p>
+            <p className="mt-4 text-[var(--brand-ink-soft)] leading-relaxed">
+              We are here to listen, guide, and walk with you on the path to
+              mental well-being.
             </p>
           </div>
           <div className="md:col-span-7 grid sm:grid-cols-2 gap-px bg-[color:rgba(14,42,56,0.08)] border border-[color:rgba(14,42,56,0.08)]">
