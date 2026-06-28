@@ -336,71 +336,72 @@ function Home() {
         </div>
       </section>
 
-      {/* TESTIMONIALS */}
+      {/* BECOME PART OF CHANGE */}
       <section className="border-t border-[color:rgba(14,42,56,0.08)] bg-[var(--brand-paper)] py-24">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="text-center max-w-2xl mx-auto">
-            <span className="eyebrow">Voices From The Circle</span>
-            <h2 className="mt-4 text-4xl sm:text-5xl">In their own words.</h2>
-          </div>
-          <div className="mt-14 grid md:grid-cols-3 gap-6">
-            {[
-              ["The phone was picked up on the second ring. That alone, in the state I was in, felt like a miracle.", "— A caller, Bengaluru"],
-              ["I came expecting a clinic. I found a room of strangers who became, somehow, family.", "— A community-circle member"],
-              ["They never told me what to feel. They only made it safe to feel anything at all.", "— A young adult, after six sessions"],
-            ].map(([q, a]) => (
-              <figure key={a} className="bg-white p-8 shadow-card">
-                <div className="font-display text-5xl leading-none text-[var(--brand-teal-deep)]">"</div>
-                <blockquote className="mt-2 text-[var(--brand-ink)] leading-relaxed font-display text-xl">
-                  {q}
-                </blockquote>
-                <figcaption className="mt-6 eyebrow">{a}</figcaption>
-              </figure>
-            ))}
+        <div className="mx-auto max-w-4xl px-6 text-center">
+          <span className="eyebrow">Become a Part of Change</span>
+          <blockquote className="mt-6 font-display text-3xl sm:text-4xl leading-snug text-[var(--brand-ink)]">
+            "Join ATHIJEEVANA and become a part of a meaningful movement that
+            promotes mental wellness, hope, and resilience in our communities."
+          </blockquote>
+          <div className="mt-10 inline-flex items-center gap-3">
+            <span className="rule" />
+            <span className="eyebrow">Strength for the Mind — Resilience for Life</span>
+            <span className="rule" />
           </div>
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="border-t border-[color:rgba(14,42,56,0.08)] bg-white py-24">
-        <div className="mx-auto max-w-5xl px-6 grid md:grid-cols-12 gap-12">
-          <div className="md:col-span-4">
-            <span className="eyebrow">Common Questions</span>
-            <h2 className="mt-4 text-4xl sm:text-5xl leading-tight">Before you reach out.</h2>
+      {/* CONTACT */}
+      <section id="contact" className="border-t border-[color:rgba(14,42,56,0.08)] bg-white py-24">
+        <div className="mx-auto max-w-6xl px-6 grid md:grid-cols-12 gap-12 items-start">
+          <div className="md:col-span-5">
+            <span className="eyebrow">Contact Us</span>
+            <h2 className="mt-4 text-4xl sm:text-5xl leading-tight">
+              Join our <em className="text-gradient-brand not-italic font-medium">community.</em>
+            </h2>
+            <p className="mt-6 text-[var(--brand-ink-soft)] leading-relaxed">
+              Reach out to Jeevani Institute of Mind Care to learn more about
+              ATHIJEEVANA, become a member, or volunteer with us.
+            </p>
           </div>
-          <div className="md:col-span-8 divide-y divide-[color:rgba(14,42,56,0.1)] border-t border-b border-[color:rgba(14,42,56,0.1)]">
-            {[
-              ["Is everything truly free?", "Yes. Every programme — counselling, circles, mediation, outreach — is offered entirely free of cost. We are sustained by volunteers and small community donations."],
-              ["Are sessions confidential?", "Absolutely. What is shared in a session stays in that room. We follow strict ethical guidelines aligned with professional counselling practice."],
-              ["Do I need a referral?", "No referral, no diagnosis, no paperwork is required. A single phone call or message is enough to begin."],
-              ["Who are your counsellors?", "A mix of licensed therapists volunteering their time, and rigorously trained community counsellors supervised by clinical mentors."],
-              ["Can I volunteer?", "Yes. We welcome thoughtful volunteers — counsellors, educators, organisers, and quiet helpers. Reach out and we'll begin a conversation."],
-            ].map(([q, a]) => (
-              <details key={q} className="group py-6">
-                <summary className="flex cursor-pointer items-start justify-between gap-6 list-none">
-                  <span className="font-display text-xl text-[var(--brand-ink)]">{q}</span>
-                  <span className="mt-1 text-[var(--brand-teal-deep)] text-xl leading-none transition group-open:rotate-45">+</span>
-                </summary>
-                <p className="mt-3 text-[var(--brand-ink-soft)] leading-relaxed">{a}</p>
-              </details>
-            ))}
+          <div className="md:col-span-7 grid sm:grid-cols-2 gap-px bg-[color:rgba(14,42,56,0.08)] border border-[color:rgba(14,42,56,0.08)]">
+            <div className="bg-white p-8 sm:col-span-2">
+              <span className="eyebrow">Address</span>
+              <p className="mt-3 font-display text-xl text-[var(--brand-ink)] leading-snug">
+                Jeevani Institute of Mind Care
+              </p>
+              <p className="mt-1 text-[var(--brand-ink-soft)]">
+                Westfort, Thrissur, Kerala, India
+              </p>
+            </div>
+            <div className="bg-white p-8">
+              <span className="eyebrow">Mobile</span>
+              <a href="tel:+919744488987" className="mt-3 block font-display text-2xl text-[var(--brand-ink)] hover:text-[var(--brand-teal-deep)]">
+                +91 97444 88987
+              </a>
+            </div>
+            <div className="bg-white p-8">
+              <span className="eyebrow">Office</span>
+              <a href="tel:+914872386088" className="mt-3 block font-display text-2xl text-[var(--brand-ink)] hover:text-[var(--brand-teal-deep)]">
+                0487 238 6088
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section id="contact" className="mx-auto max-w-6xl px-6 py-24">
+      {/* MEMBER VERIFY CTA */}
+      <section className="mx-auto max-w-6xl px-6 pb-24">
         <div className="relative overflow-hidden bg-[var(--brand-ink)] text-white p-12 sm:p-20 text-center">
           <div className="absolute inset-0 bg-gradient-hero opacity-50" />
           <div className="relative">
             <span className="eyebrow text-[var(--brand-teal)]">For Members</span>
             <h2 className="mt-4 text-4xl sm:text-5xl text-white">
-              Are you a member of <em className="text-gradient-brand not-italic font-medium">Athijeevana?</em>
+              Are you a member of <em className="text-gradient-brand not-italic font-medium">ATHIJEEVANA?</em>
             </h2>
             <p className="mt-5 text-white/70 text-lg max-w-2xl mx-auto leading-relaxed">
               Verify your membership instantly using the code shared by our team.
-              Members enjoy priority access, dedicated circles, and a continuing
-              fellowship of care.
             </p>
             <a
               href="/verify"
@@ -411,6 +412,7 @@ function Home() {
           </div>
         </div>
       </section>
+
 
       <SiteFooter />
     </div>
