@@ -268,6 +268,8 @@ function Home() {
           </p>
           <div className="mt-10 mx-auto max-w-2xl border-t border-white/10 pt-8">
             <p className="text-white/80 leading-relaxed">
+              The ATHIJEEVANA Community Mental Health Project was formally inaugurated
+              by Prof. C. Ravindran, Former Minister for Education, Government of Kerala.
               His presence and encouragement have strengthened our commitment to
               community mental health and social welfare.
             </p>
