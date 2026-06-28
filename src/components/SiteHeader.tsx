@@ -11,7 +11,7 @@ export function SiteHeader() {
             <span className="font-display text-xl tracking-tight text-[var(--brand-ink)]">
               Athijeevana
             </span>
-            <span className="eyebrow mt-1 text-[0.6rem]">Heal · Rise · Live</span>
+            <span className="eyebrow mt-1 text-[0.6rem]">Strength for the Mind · Resilience for Life</span>
           </span>
         </Link>
         <nav className="flex items-center gap-1 sm:gap-2 text-sm">
@@ -54,9 +54,15 @@ export function SiteFooter() {
         <div className="md:col-span-2">
           <img src={logoAsset.url} alt="Athijeevana" className="h-14 w-auto" />
           <p className="mt-5 text-sm leading-relaxed text-[var(--brand-ink-soft)] max-w-sm">
-            A community mental health and free counselling programme — built on the
-            promise that no one should suffer alone.
+            A community mental health initiative by Jeevani Institute of Mind Care —
+            ensuring quality mental health care reaches everyone, regardless of background.
           </p>
+          <div className="mt-6 text-sm text-[var(--brand-ink-soft)] space-y-1">
+            <p className="font-medium text-[var(--brand-ink)]">Jeevani Institute of Mind Care</p>
+            <p>Westfort, Thrissur, Kerala, India</p>
+            <p>Mobile: <a href="tel:+919744488987" className="hover:text-[var(--brand-ink)]">+91 97444 88987</a></p>
+            <p>Office: <a href="tel:+914872386088" className="hover:text-[var(--brand-ink)]">0487 238 6088</a></p>
+          </div>
         </div>
         <div>
           <p className="eyebrow">Explore</p>
@@ -77,7 +83,7 @@ export function SiteFooter() {
       <div className="border-t border-[color:rgba(14,42,56,0.08)]">
         <div className="mx-auto max-w-7xl px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[var(--brand-ink-soft)]">
           <p>© {new Date().getFullYear()} Athijeevana. All rights reserved.</p>
-          <p className="tracking-[0.2em] uppercase">Heal · Rise · Live</p>
+          <p className="tracking-[0.2em] uppercase">Strength for the Mind · Resilience for Life</p>
         </div>
       </div>
     </footer>
