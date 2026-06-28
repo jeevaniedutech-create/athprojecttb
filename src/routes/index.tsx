@@ -58,46 +58,42 @@ function Home() {
               <span className="eyebrow">A Community Mental Health Initiative</span>
             </div>
             <h1 className="mt-6 text-5xl sm:text-6xl lg:text-7xl leading-[1.02] tracking-tight">
-              A quiet sanctuary
+              Welcome to
               <br />
-              for the mind,
-              <br />
-              <em className="text-gradient-brand not-italic font-medium">a community for the soul.</em>
+              <em className="text-gradient-brand not-italic font-medium">ATHIJEEVANA.</em>
             </h1>
             <p className="mt-8 max-w-xl text-[1.05rem] leading-relaxed text-[var(--brand-ink-soft)]">
-              Athijeevana is a community-led mental health programme offering free,
-              confidential counselling, peer-support circles, and a continuing
-              fellowship of care — for everyone who needs to be heard.
+              A community mental health initiative launched by Jeevani Institute of
+              Mind Care — with the vision of promoting mental well-being and providing
+              accessible psychological support to individuals in need.
+            </p>
+            <p className="mt-5 max-w-xl text-[1.05rem] leading-relaxed text-[var(--brand-ink-soft)]">
+              Our mission is to ensure that quality mental health care reaches everyone,
+              especially those who face financial difficulties or lack access to
+              professional counselling services. We believe every individual deserves
+              emotional support, hope, and the opportunity to lead a healthy, meaningful life.
             </p>
             <div className="mt-10 flex flex-wrap gap-3">
               <a
                 href="#about"
                 className="rounded-full bg-[var(--brand-ink)] px-7 py-3.5 text-sm font-medium text-white hover:bg-[var(--brand-teal-deep)] transition"
               >
-                Our Mission
+                Our Vision & Mission
               </a>
               <a
-                href="#works"
+                href="#services"
                 className="rounded-full bg-white px-7 py-3.5 text-sm font-medium text-[var(--brand-ink)] border border-[color:rgba(14,42,56,0.12)] hover:border-[var(--brand-ink)] transition"
               >
-                See Our Works →
+                Our Services →
               </a>
             </div>
 
-            <dl className="mt-14 grid grid-cols-3 gap-6 max-w-lg border-t border-[color:rgba(14,42,56,0.1)] pt-8">
-              {[
-                ["2,400+", "Sessions held"],
-                ["60+", "Volunteer counsellors"],
-                ["100%", "Free, always"],
-              ].map(([n, l]) => (
-                <div key={l}>
-                  <dt className="font-display text-3xl text-[var(--brand-ink)]">{n}</dt>
-                  <dd className="mt-1 text-[11px] uppercase tracking-[0.18em] text-[var(--brand-ink-soft)]">
-                    {l}
-                  </dd>
-                </div>
-              ))}
-            </dl>
+            <div className="mt-14 border-t border-[color:rgba(14,42,56,0.1)] pt-8 max-w-lg">
+              <span className="eyebrow">Our Motto</span>
+              <p className="mt-3 font-display text-2xl leading-snug text-[var(--brand-ink)]">
+                "Strength for the Mind — Resilience for Life."
+              </p>
+            </div>
           </div>
 
           <div className="md:col-span-5 relative">
@@ -109,9 +105,9 @@ function Home() {
                 className="absolute inset-0 m-auto h-48 w-auto"
               />
               <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-[color:rgba(14,42,56,0.08)] bg-white/80 backdrop-blur">
-                <p className="eyebrow">Est. 2019</p>
+                <p className="eyebrow">By Jeevani Institute of Mind Care</p>
                 <p className="mt-2 font-display text-xl text-[var(--brand-ink)] leading-snug">
-                  "Whoever calls, will be answered."
+                  Strength for the Mind — Resilience for Life.
                 </p>
               </div>
             </div>
@@ -121,119 +117,59 @@ function Home() {
         </div>
       </section>
 
-      {/* PILLARS */}
+      {/* VISION & MISSION */}
       <section id="about" className="border-t border-[color:rgba(14,42,56,0.08)] bg-white">
         <div className="mx-auto max-w-7xl px-6 py-24">
-          <div className="grid md:grid-cols-12 gap-12 items-end">
+          <div className="grid md:grid-cols-12 gap-12 items-start">
             <div className="md:col-span-5">
-              <span className="eyebrow">Our Three Pillars</span>
+              <span className="eyebrow">Our Vision & Mission</span>
               <h2 className="mt-4 text-4xl sm:text-5xl leading-tight">
-                Built on the quiet practice of <em className="text-gradient-brand not-italic font-medium">Heal, Rise, Live.</em>
+                A mentally healthy, resilient, and <em className="text-gradient-brand not-italic font-medium">compassionate society.</em>
               </h2>
             </div>
-            <p className="md:col-span-6 md:col-start-7 text-[var(--brand-ink-soft)] leading-relaxed">
-              Every conversation, every workshop, every quiet act of care we offer is
-              rooted in three guiding promises. They shape who we accept as
-              volunteers, how we train them, and the patience we bring to each person
-              who walks through our door.
-            </p>
-          </div>
-
-          <div className="mt-16 grid gap-px bg-[color:rgba(14,42,56,0.08)] md:grid-cols-3 border border-[color:rgba(14,42,56,0.08)]">
-            {[
-              {
-                t: "Heal",
-                n: "01",
-                c: "var(--brand-pink)",
-                d: "Free, confidential counselling sessions led by trained volunteer counsellors who listen without judgment, without clock, without cost.",
-              },
-              {
-                t: "Rise",
-                n: "02",
-                c: "var(--brand-orange)",
-                d: "Workshops, peer-support circles, and creative therapies that rebuild self-worth, agency, and a quiet, durable resilience.",
-              },
-              {
-                t: "Live",
-                n: "03",
-                c: "var(--brand-teal)",
-                d: "A continuing community of friendship, follow-ups, and gentle accountability — because healing is a season, not an appointment.",
-              },
-            ].map((p) => (
-              <div key={p.t} className="bg-white p-10 hover:bg-[var(--brand-cream)] transition">
-                <div className="flex items-baseline justify-between">
-                  <span className="font-display text-5xl text-[var(--brand-ink)]">{p.t}</span>
-                  <span className="eyebrow text-[var(--brand-ink-soft)]">{p.n}</span>
-                </div>
-                <div className="mt-6 h-px w-full bg-[color:rgba(14,42,56,0.1)]" />
-                <p className="mt-6 text-[var(--brand-ink-soft)] leading-relaxed">{p.d}</p>
-                <div className="mt-8 h-1 w-12" style={{ background: p.c }} />
+            <div className="md:col-span-7 space-y-8 text-[var(--brand-ink-soft)] leading-relaxed">
+              <div>
+                <span className="eyebrow">Vision</span>
+                <p className="mt-3 text-[1.05rem]">
+                  To build a mentally healthy, resilient, and compassionate society
+                  where every person has access to professional mental health support
+                  regardless of their financial background.
+                </p>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* STORY */}
-      <section className="border-t border-[color:rgba(14,42,56,0.08)] py-24 bg-[var(--brand-paper)]">
-        <div className="mx-auto max-w-6xl px-6 grid gap-16 md:grid-cols-12 items-start">
-          <div className="md:col-span-5">
-            <span className="eyebrow">Our Story</span>
-            <h2 className="mt-4 text-4xl sm:text-5xl leading-tight">
-              Born from a quiet belief that <em className="text-gradient-brand not-italic font-medium">no one should suffer alone.</em>
-            </h2>
-            <div className="mt-8 flex items-center gap-3">
-              <span className="rule" />
-              <span className="eyebrow">Since 2019</span>
+              <div>
+                <span className="eyebrow">Mission</span>
+                <ul className="mt-3 space-y-3 text-[1.05rem]">
+                  <li className="flex gap-3"><span className="text-[var(--brand-teal-deep)]">—</span> Provide free and affordable counselling services to those in need.</li>
+                  <li className="flex gap-3"><span className="text-[var(--brand-teal-deep)]">—</span> Promote mental health awareness within communities.</li>
+                  <li className="flex gap-3"><span className="text-[var(--brand-teal-deep)]">—</span> Support students, families, and vulnerable populations.</li>
+                  <li className="flex gap-3"><span className="text-[var(--brand-teal-deep)]">—</span> Create a network of dedicated mental health professionals and volunteers committed to social well-being.</li>
+                </ul>
+              </div>
             </div>
           </div>
-          <div className="md:col-span-7 space-y-6 text-[var(--brand-ink-soft)] leading-relaxed text-[1.05rem] md:text-[1.1rem]">
-            <p className="first-letter:font-display first-letter:text-6xl first-letter:float-left first-letter:mr-3 first-letter:leading-none first-letter:text-[var(--brand-ink)]">
-              Athijeevana began as a small circle of friends, counsellors, and
-              survivors who watched too many people slip through the cracks of an
-              overburdened system. We started with simple home visits, a single
-              phone line, and a promise: whoever calls will be answered.
-            </p>
-            <p>
-              Today, we are a growing community of trained volunteers, licensed
-              therapists, educators, and members — bound by a shared commitment to
-              make mental wellness accessible, dignified, and entirely free for
-              those who need it most.
-            </p>
-            <p>We do not charge. We do not judge. We simply walk alongside.</p>
-            <figure className="mt-10 border-l-2 border-[var(--brand-teal)] pl-6">
-              <blockquote className="font-display text-2xl leading-snug text-[var(--brand-ink)]">
-                "We are not here to fix anyone. We are here to sit with them, until
-                the room feels safe enough for them to fix themselves."
-              </blockquote>
-              <figcaption className="mt-3 eyebrow">— A founding volunteer</figcaption>
-            </figure>
-          </div>
         </div>
       </section>
 
-      {/* PROGRAMMES */}
-      <section id="programmes" className="border-t border-[color:rgba(14,42,56,0.08)] bg-white">
+      {/* SERVICES */}
+      <section id="services" className="border-t border-[color:rgba(14,42,56,0.08)] bg-[var(--brand-paper)]">
         <div className="mx-auto max-w-7xl px-6 py-24">
           <div className="flex items-end justify-between flex-wrap gap-6">
             <div>
               <span className="eyebrow">What We Offer</span>
-              <h2 className="mt-4 text-4xl sm:text-5xl">Our Programmes</h2>
+              <h2 className="mt-4 text-4xl sm:text-5xl">Our Services</h2>
             </div>
             <p className="max-w-md text-[var(--brand-ink-soft)] leading-relaxed">
-              Six core programmes, each shaped by a decade of community listening —
-              and continually refined by the people they serve.
+              Programmes shaped by community listening — offered with care, dignity,
+              and an unwavering commitment to accessibility.
             </p>
           </div>
 
-          <div className="mt-14 grid gap-px bg-[color:rgba(14,42,56,0.08)] md:grid-cols-2 lg:grid-cols-3 border border-[color:rgba(14,42,56,0.08)]">
+          <div className="mt-14 grid gap-px bg-[color:rgba(14,42,56,0.08)] md:grid-cols-2 border border-[color:rgba(14,42,56,0.08)]">
             {[
-              ["01", "Free Counselling", "One-on-one confidential sessions, in person or by phone, with no waiting list, no cost, no paperwork."],
-              ["02", "Crisis Support", "A compassionate first response for moments of acute distress — answered by a real person, day or night."],
-              ["03", "Community Circles", "Weekly peer groups where stories are held with care and met with quiet, structured listening."],
-              ["04", "School Outreach", "Workshops in schools and colleges that teach young people the language of feelings, before silence calcifies."],
-              ["05", "Family Mediation", "Gentle, structured conversations to repair relationships strained by illness, grief, or distance."],
-              ["06", "Creative Therapies", "Art, music, and movement sessions as alternative pathways back to the self for those who cannot find words."],
+              ["01", "Free Counselling Sessions", "Professional counselling support for individuals experiencing emotional, psychological, family, academic, or personal challenges."],
+              ["02", "Crisis Support Services", "Immediate psychological assistance and guidance for individuals facing emotional crises and difficult life situations."],
+              ["03", "Student Mental Health Programmes", "Mental health awareness programmes, workshops, and counselling support designed specifically for school and college students."],
+              ["04", "Community Awareness Workshops", "Educational seminars and awareness campaigns aimed at reducing stigma and promoting mental well-being in society."],
             ].map(([n, t, d]) => (
               <div key={t} className="bg-white p-10 hover:bg-[var(--brand-cream)] transition group">
                 <div className="flex items-baseline justify-between">
@@ -248,60 +184,87 @@ function Home() {
         </div>
       </section>
 
-      {/* APPROACH */}
-      <section className="border-t border-[color:rgba(14,42,56,0.08)] py-24 bg-[var(--brand-cream)]">
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="text-center max-w-3xl mx-auto">
-            <span className="eyebrow">Our Approach</span>
-            <h2 className="mt-4 text-4xl sm:text-5xl">Slow care, quietly delivered.</h2>
+      {/* JOIN MOVEMENT */}
+      <section className="border-t border-[color:rgba(14,42,56,0.08)] py-24 bg-white">
+        <div className="mx-auto max-w-6xl px-6 grid gap-16 md:grid-cols-12 items-start">
+          <div className="md:col-span-5">
+            <span className="eyebrow">Join Our Movement</span>
+            <h2 className="mt-4 text-4xl sm:text-5xl leading-tight">
+              Together, a <em className="text-gradient-brand not-italic font-medium">healthier, more compassionate</em> society.
+            </h2>
+            <p className="mt-6 text-[var(--brand-ink-soft)] leading-relaxed">
+              Your contribution can make a significant difference in the lives of
+              individuals and families seeking support.
+            </p>
           </div>
-          <ol className="mt-16 grid md:grid-cols-4 gap-8">
-            {[
-              ["Listen", "We begin with silence, not solutions. Every story is met with full attention."],
-              ["Understand", "Trained counsellors map the contours of what you carry — without diagnosis or judgment."],
-              ["Walk Alongside", "We choose, together, the next gentle step. A session, a circle, a friend on the phone."],
-              ["Return", "Healing is not linear. Our door remains open, always. You can come back, again and again."],
-            ].map(([t, d], i) => (
-              <li key={t} className="relative">
-                <div className="font-display text-6xl text-[var(--brand-teal-deep)] opacity-30">
-                  {String(i + 1).padStart(2, "0")}
+          <div className="md:col-span-7">
+            <p className="text-[var(--brand-ink-soft)] leading-relaxed">ATHIJEEVANA welcomes:</p>
+            <div className="mt-6 grid sm:grid-cols-2 gap-px bg-[color:rgba(14,42,56,0.08)] border border-[color:rgba(14,42,56,0.08)]">
+              {[
+                "Psychologists",
+                "Counsellors",
+                "Social Workers",
+                "Mental Health Professionals",
+                "Psychology Students",
+                "Volunteers & Community Leaders",
+              ].map((r) => (
+                <div key={r} className="bg-white p-5 text-[var(--brand-ink)] font-display text-lg">
+                  {r}
                 </div>
-                <h3 className="mt-3 text-xl">{t}</h3>
-                <p className="mt-2 text-sm text-[var(--brand-ink-soft)] leading-relaxed">{d}</p>
-              </li>
-            ))}
-          </ol>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* IMPACT */}
-      <section className="bg-[var(--brand-ink)] text-white py-24">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="flex items-end justify-between flex-wrap gap-6">
-            <div>
-              <span className="eyebrow text-[var(--brand-teal)]">By The Numbers</span>
-              <h2 className="mt-4 text-4xl sm:text-5xl text-white">A measure of presence.</h2>
-            </div>
-            <p className="max-w-md text-white/70 leading-relaxed">
-              Numbers cannot describe what happens in a counselling room — but they
-              do trace the shape of a community choosing care, together.
+      {/* MEMBERSHIP BENEFITS */}
+      <section className="border-t border-[color:rgba(14,42,56,0.08)] py-24 bg-[var(--brand-cream)]">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="text-center max-w-3xl mx-auto">
+            <span className="eyebrow">Membership Benefits</span>
+            <h2 className="mt-4 text-4xl sm:text-5xl">Become part of the project.</h2>
+            <p className="mt-5 text-[var(--brand-ink-soft)] leading-relaxed">
+              Individuals who become part of the ATHIJEEVANA Mental Health Project
+              will receive:
             </p>
           </div>
-          <div className="mt-14 grid gap-px bg-white/10 sm:grid-cols-2 lg:grid-cols-4 border border-white/10">
+          <div className="mt-14 grid md:grid-cols-3 gap-px bg-[color:rgba(14,42,56,0.08)] border border-[color:rgba(14,42,56,0.08)]">
             {[
-              ["2,400+", "Counselling sessions held"],
-              ["60+", "Volunteer counsellors"],
-              ["120+", "Community workshops"],
-              ["100%", "Free, always"],
-            ].map(([n, l]) => (
-              <div key={l} className="bg-[var(--brand-ink)] p-10">
-                <div className="font-display text-5xl sm:text-6xl text-white">{n}</div>
-                <p className="mt-3 text-[11px] uppercase tracking-[0.2em] text-white/60">{l}</p>
+              ["01", "Official Membership Card", "A formal identification card recognising you as a member of the ATHIJEEVANA community."],
+              ["02", "Community Participation", "Opportunities to participate in community mental health initiatives across Kerala."],
+              ["03", "Professional Network", "Professional networking and meaningful social service experience alongside committed peers."],
+            ].map(([n, t, d]) => (
+              <div key={t} className="bg-white p-10">
+                <div className="font-display text-5xl text-[var(--brand-teal-deep)] opacity-30">{n}</div>
+                <h3 className="mt-4 text-xl">{t}</h3>
+                <p className="mt-3 text-sm text-[var(--brand-ink-soft)] leading-relaxed">{d}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
+
+      {/* INAUGURATION */}
+      <section className="bg-[var(--brand-ink)] text-white py-24">
+        <div className="mx-auto max-w-5xl px-6 text-center">
+          <span className="eyebrow text-[var(--brand-teal)]">Inauguration</span>
+          <h2 className="mt-4 text-4xl sm:text-5xl text-white leading-tight">
+            Formally inaugurated by
+            <br />
+            <em className="text-gradient-brand not-italic font-medium">Prof. C. Ravindran.</em>
+          </h2>
+          <p className="mt-6 text-white/70 text-lg">
+            Former Minister for Education, Government of Kerala.
+          </p>
+          <div className="mt-10 mx-auto max-w-2xl border-t border-white/10 pt-8">
+            <p className="text-white/80 leading-relaxed">
+              His presence and encouragement have strengthened our commitment to
+              community mental health and social welfare.
+            </p>
+          </div>
+        </div>
+      </section>
+
 
       {/* WORKS / GALLERY */}
       <section id="works" className="border-t border-[color:rgba(14,42,56,0.08)] bg-white">
