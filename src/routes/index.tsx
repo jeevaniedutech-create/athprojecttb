@@ -63,15 +63,18 @@ function Home() {
               <em className="text-gradient-brand not-italic font-medium">ATHIJEEVANA.</em>
             </h1>
             <p className="mt-8 max-w-xl text-[1.05rem] leading-relaxed text-[var(--brand-ink-soft)]">
-              A community mental health initiative launched by Jeevani Institute of
-              Mind Care — with the vision of promoting mental well-being and providing
-              accessible psychological support to individuals in need.
+              ATHIJEEVANA is a community mental health initiative launched by
+              Jeevani Institute of Mind Care with the vision of promoting mental
+              well-being and providing accessible psychological support to individuals
+              in need. We work across communities in Kerala, bringing professional
+              care closer to the people who need it most.
             </p>
             <p className="mt-5 max-w-xl text-[1.05rem] leading-relaxed text-[var(--brand-ink-soft)]">
               Our mission is to ensure that quality mental health care reaches everyone,
               especially those who face financial difficulties or lack access to
-              professional counselling services. We believe every individual deserves
-              emotional support, hope, and the opportunity to lead a healthy, meaningful life.
+              professional counselling services. We believe that every individual deserves
+              emotional support, hope, and the opportunity to lead a healthy and
+              meaningful life.
             </p>
             <div className="mt-10 flex flex-wrap gap-3">
               <a
@@ -97,17 +100,17 @@ function Home() {
           </div>
 
           <div className="md:col-span-5 relative">
-            <div className="relative aspect-[4/5] rounded-[2px] overflow-hidden shadow-luxe bg-white">
-              <div className="absolute inset-0 bg-gradient-to-br from-[var(--brand-paper)] to-white" />
-              <img
-                src={logoAsset.url}
-                alt="Athijeevana"
-                className="absolute inset-0 m-auto h-48 w-auto"
-              />
-              <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-[color:rgba(14,42,56,0.08)] bg-white/80 backdrop-blur">
-                <p className="eyebrow">By Jeevani Institute of Mind Care</p>
-                <p className="mt-2 font-display text-xl text-[var(--brand-ink)] leading-snug">
-                  Strength for the Mind — Resilience for Life.
+            <div className="relative rounded-[2px] overflow-hidden shadow-luxe bg-white p-10">
+              <div className="bg-gradient-to-br from-[var(--brand-paper)] to-white py-16 px-8">
+                <img
+                  src={logoAsset.url}
+                  alt="Athijeevana"
+                  className="mx-auto h-48 w-auto"
+                />
+                <p className="mt-10 text-center font-display text-xl text-[var(--brand-ink)] leading-snug">
+                  Strength for the Mind
+                  <br />
+                  — Resilience for Life.
                 </p>
               </div>
             </div>
@@ -133,15 +136,17 @@ function Home() {
                 <p className="mt-3 text-[1.05rem]">
                   To build a mentally healthy, resilient, and compassionate society
                   where every person has access to professional mental health support
-                  regardless of their financial background.
+                  regardless of their financial background. We envision communities
+                  where seeking help is seen as a sign of strength, and where no one
+                  is left to struggle alone.
                 </p>
               </div>
               <div>
                 <span className="eyebrow">Mission</span>
                 <ul className="mt-3 space-y-3 text-[1.05rem]">
-                  <li className="flex gap-3"><span className="text-[var(--brand-teal-deep)]">—</span> Provide free and affordable counselling services to those in need.</li>
-                  <li className="flex gap-3"><span className="text-[var(--brand-teal-deep)]">—</span> Promote mental health awareness within communities.</li>
-                  <li className="flex gap-3"><span className="text-[var(--brand-teal-deep)]">—</span> Support students, families, and vulnerable populations.</li>
+                  <li className="flex gap-3"><span className="text-[var(--brand-teal-deep)]">—</span> Provide free and affordable counselling services to those in need, making professional support accessible to all.</li>
+                  <li className="flex gap-3"><span className="text-[var(--brand-teal-deep)]">—</span> Promote mental health awareness within communities through education, dialogue, and outreach.</li>
+                  <li className="flex gap-3"><span className="text-[var(--brand-teal-deep)]">—</span> Support students, families, and vulnerable populations by addressing their unique emotional and psychological needs.</li>
                   <li className="flex gap-3"><span className="text-[var(--brand-teal-deep)]">—</span> Create a network of dedicated mental health professionals and volunteers committed to social well-being.</li>
                 </ul>
               </div>
@@ -166,10 +171,10 @@ function Home() {
 
           <div className="mt-14 grid gap-px bg-[color:rgba(14,42,56,0.08)] md:grid-cols-2 border border-[color:rgba(14,42,56,0.08)]">
             {[
-              ["01", "Free Counselling Sessions", "Professional counselling support for individuals experiencing emotional, psychological, family, academic, or personal challenges."],
-              ["02", "Crisis Support Services", "Immediate psychological assistance and guidance for individuals facing emotional crises and difficult life situations."],
-              ["03", "Student Mental Health Programmes", "Mental health awareness programmes, workshops, and counselling support designed specifically for school and college students."],
-              ["04", "Community Awareness Workshops", "Educational seminars and awareness campaigns aimed at reducing stigma and promoting mental well-being in society."],
+              ["01", "Free Counselling Sessions", "Professional counselling support for individuals experiencing emotional, psychological, family, academic, or personal challenges. These sessions are offered with confidentiality, empathy, and respect, ensuring that help is available to everyone who reaches out."],
+              ["02", "Crisis Support Services", "Immediate psychological assistance and guidance for individuals facing emotional crises and difficult life situations. Our trained team provides timely support to help people navigate overwhelming moments with care and stability."],
+              ["03", "Student Mental Health Programmes", "Mental health awareness programmes, workshops, and counselling support designed specifically for school and college students. We focus on early intervention, stress management, and building emotional resilience among young people."],
+              ["04", "Community Awareness Workshops", "Educational seminars and awareness campaigns aimed at reducing stigma and promoting mental well-being in society. These workshops encourage open conversations and equip communities with the knowledge to support one another."],
             ].map(([n, t, d]) => (
               <div key={t} className="bg-white p-10 hover:bg-[var(--brand-cream)] transition group">
                 <div className="flex items-baseline justify-between">
@@ -193,6 +198,11 @@ function Home() {
               Together, a <em className="text-gradient-brand not-italic font-medium">healthier, more compassionate</em> society.
             </h2>
             <p className="mt-6 text-[var(--brand-ink-soft)] leading-relaxed">
+              ATHIJEEVANA is strengthened by the collective effort of professionals,
+              students, and community members who share a common purpose: to make
+              mental health support accessible, stigma-free, and rooted in care.
+            </p>
+            <p className="mt-4 text-[var(--brand-ink-soft)] leading-relaxed">
               Your contribution can make a significant difference in the lives of
               individuals and families seeking support.
             </p>
@@ -230,9 +240,9 @@ function Home() {
           </div>
           <div className="mt-14 grid md:grid-cols-3 gap-px bg-[color:rgba(14,42,56,0.08)] border border-[color:rgba(14,42,56,0.08)]">
             {[
-              ["01", "Official Membership Card", "A formal identification card recognising you as a member of the ATHIJEEVANA community."],
-              ["02", "Community Participation", "Opportunities to participate in community mental health initiatives across Kerala."],
-              ["03", "Professional Network", "Professional networking and meaningful social service experience alongside committed peers."],
+              ["01", "Official Membership Card", "A formal identification card recognising you as a member of the ATHIJEEVANA community. It serves as a symbol of your commitment to mental health awareness and social care."],
+              ["02", "Community Participation", "Opportunities to participate in community mental health initiatives across Kerala. Members are invited to join awareness drives, workshops, and outreach activities that create lasting impact."],
+              ["03", "Professional Network", "Professional networking and meaningful social service experience alongside committed peers. Build connections with counsellors, psychologists, social workers, and volunteers who share your values."],
             ].map(([n, t, d]) => (
               <div key={t} className="bg-white p-10">
                 <div className="font-display text-5xl text-[var(--brand-teal-deep)] opacity-30">{n}</div>
@@ -258,6 +268,8 @@ function Home() {
           </p>
           <div className="mt-10 mx-auto max-w-2xl border-t border-white/10 pt-8">
             <p className="text-white/80 leading-relaxed">
+              The ATHIJEEVANA Community Mental Health Project was formally inaugurated
+              by Prof. C. Ravindran, Former Minister for Education, Government of Kerala.
               His presence and encouragement have strengthened our commitment to
               community mental health and social welfare.
             </p>
@@ -362,7 +374,12 @@ function Home() {
             </h2>
             <p className="mt-6 text-[var(--brand-ink-soft)] leading-relaxed">
               Reach out to Jeevani Institute of Mind Care to learn more about
-              ATHIJEEVANA, become a member, or volunteer with us.
+              ATHIJEEVANA, become a member, volunteer with us, or refer someone
+              who may benefit from our support.
+            </p>
+            <p className="mt-4 text-[var(--brand-ink-soft)] leading-relaxed">
+              We are here to listen, guide, and walk with you on the path to
+              mental well-being.
             </p>
           </div>
           <div className="md:col-span-7 grid sm:grid-cols-2 gap-px bg-[color:rgba(14,42,56,0.08)] border border-[color:rgba(14,42,56,0.08)]">
