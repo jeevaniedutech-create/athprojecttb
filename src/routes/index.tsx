@@ -198,6 +198,11 @@ function Home() {
               Together, a <em className="text-gradient-brand not-italic font-medium">healthier, more compassionate</em> society.
             </h2>
             <p className="mt-6 text-[var(--brand-ink-soft)] leading-relaxed">
+              ATHIJEEVANA is strengthened by the collective effort of professionals,
+              students, and community members who share a common purpose: to make
+              mental health support accessible, stigma-free, and rooted in care.
+            </p>
+            <p className="mt-4 text-[var(--brand-ink-soft)] leading-relaxed">
               Your contribution can make a significant difference in the lives of
               individuals and families seeking support.
             </p>
