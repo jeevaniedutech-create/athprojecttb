@@ -136,15 +136,17 @@ function Home() {
                 <p className="mt-3 text-[1.05rem]">
                   To build a mentally healthy, resilient, and compassionate society
                   where every person has access to professional mental health support
-                  regardless of their financial background.
+                  regardless of their financial background. We envision communities
+                  where seeking help is seen as a sign of strength, and where no one
+                  is left to struggle alone.
                 </p>
               </div>
               <div>
                 <span className="eyebrow">Mission</span>
                 <ul className="mt-3 space-y-3 text-[1.05rem]">
-                  <li className="flex gap-3"><span className="text-[var(--brand-teal-deep)]">—</span> Provide free and affordable counselling services to those in need.</li>
-                  <li className="flex gap-3"><span className="text-[var(--brand-teal-deep)]">—</span> Promote mental health awareness within communities.</li>
-                  <li className="flex gap-3"><span className="text-[var(--brand-teal-deep)]">—</span> Support students, families, and vulnerable populations.</li>
+                  <li className="flex gap-3"><span className="text-[var(--brand-teal-deep)]">—</span> Provide free and affordable counselling services to those in need, making professional support accessible to all.</li>
+                  <li className="flex gap-3"><span className="text-[var(--brand-teal-deep)]">—</span> Promote mental health awareness within communities through education, dialogue, and outreach.</li>
+                  <li className="flex gap-3"><span className="text-[var(--brand-teal-deep)]">—</span> Support students, families, and vulnerable populations by addressing their unique emotional and psychological needs.</li>
                   <li className="flex gap-3"><span className="text-[var(--brand-teal-deep)]">—</span> Create a network of dedicated mental health professionals and volunteers committed to social well-being.</li>
                 </ul>
               </div>
