@@ -11,7 +11,7 @@ export function SiteHeader() {
             <span className="font-display text-xl tracking-tight text-[var(--brand-ink)]">
               Athijeevana
             </span>
-            <span className="eyebrow mt-1 text-[0.6rem]">Heal · Rise · Live</span>
+            <span className="eyebrow mt-1 text-[0.6rem]">Strength for the Mind · Resilience for Life</span>
           </span>
         </Link>
         <nav className="flex items-center gap-1 sm:gap-2 text-sm">
