@@ -97,17 +97,17 @@ function Home() {
           </div>
 
           <div className="md:col-span-5 relative">
-            <div className="relative aspect-[4/5] rounded-[2px] overflow-hidden shadow-luxe bg-white">
-              <div className="absolute inset-0 bg-gradient-to-br from-[var(--brand-paper)] to-white" />
-              <img
-                src={logoAsset.url}
-                alt="Athijeevana"
-                className="absolute inset-0 m-auto h-48 w-auto"
-              />
-              <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-[color:rgba(14,42,56,0.08)] bg-white/80 backdrop-blur">
-                <p className="eyebrow">By Jeevani Institute of Mind Care</p>
-                <p className="mt-2 font-display text-xl text-[var(--brand-ink)] leading-snug">
-                  Strength for the Mind — Resilience for Life.
+            <div className="relative rounded-[2px] overflow-hidden shadow-luxe bg-white p-10">
+              <div className="bg-gradient-to-br from-[var(--brand-paper)] to-white py-16 px-8">
+                <img
+                  src={logoAsset.url}
+                  alt="Athijeevana"
+                  className="mx-auto h-48 w-auto"
+                />
+                <p className="mt-10 text-center font-display text-xl text-[var(--brand-ink)] leading-snug">
+                  Strength for the Mind
+                  <br />
+                  — Resilience for Life.
                 </p>
               </div>
             </div>
