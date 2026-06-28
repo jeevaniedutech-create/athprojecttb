@@ -171,10 +171,10 @@ function Home() {
 
           <div className="mt-14 grid gap-px bg-[color:rgba(14,42,56,0.08)] md:grid-cols-2 border border-[color:rgba(14,42,56,0.08)]">
             {[
-              ["01", "Free Counselling Sessions", "Professional counselling support for individuals experiencing emotional, psychological, family, academic, or personal challenges."],
-              ["02", "Crisis Support Services", "Immediate psychological assistance and guidance for individuals facing emotional crises and difficult life situations."],
-              ["03", "Student Mental Health Programmes", "Mental health awareness programmes, workshops, and counselling support designed specifically for school and college students."],
-              ["04", "Community Awareness Workshops", "Educational seminars and awareness campaigns aimed at reducing stigma and promoting mental well-being in society."],
+              ["01", "Free Counselling Sessions", "Professional counselling support for individuals experiencing emotional, psychological, family, academic, or personal challenges. These sessions are offered with confidentiality, empathy, and respect, ensuring that help is available to everyone who reaches out."],
+              ["02", "Crisis Support Services", "Immediate psychological assistance and guidance for individuals facing emotional crises and difficult life situations. Our trained team provides timely support to help people navigate overwhelming moments with care and stability."],
+              ["03", "Student Mental Health Programmes", "Mental health awareness programmes, workshops, and counselling support designed specifically for school and college students. We focus on early intervention, stress management, and building emotional resilience among young people."],
+              ["04", "Community Awareness Workshops", "Educational seminars and awareness campaigns aimed at reducing stigma and promoting mental well-being in society. These workshops encourage open conversations and equip communities with the knowledge to support one another."],
             ].map(([n, t, d]) => (
               <div key={t} className="bg-white p-10 hover:bg-[var(--brand-cream)] transition group">
                 <div className="flex items-baseline justify-between">
