@@ -318,9 +318,6 @@ function Home() {
                 time, by hand.
               </p>
             </div>
-            <span className="eyebrow text-[var(--brand-ink-soft)]">
-              {images.length.toString().padStart(3, "0")} / 100 Moments
-            </span>
           </div>
 
           {loading ? (
