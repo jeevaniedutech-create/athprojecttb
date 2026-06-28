@@ -346,10 +346,11 @@ function Home() {
               {visible < images.length && (
                 <div className="mt-12 text-center">
                   <button
-                    onClick={() => setVisible((v) => v + PAGE)}
-                    className="rounded-full border border-[var(--brand-ink)] px-8 py-3 text-sm font-medium text-[var(--brand-ink)] hover:bg-[var(--brand-ink)] hover:text-white transition"
+                    onClick={handleViewMore}
+                    disabled={viewMoreLoading}
+                    className="rounded-full border border-[var(--brand-ink)] px-8 py-3 text-sm font-medium text-[var(--brand-ink)] hover:bg-[var(--brand-ink)] hover:text-white transition disabled:opacity-60 disabled:cursor-not-allowed"
                   >
-                    Load More Moments ({images.length - visible} remaining)
+                    {viewMoreLoading ? "Loading next set…" : `View More (${images.length - visible} remaining)`}
                   </button>
                 </div>
               )}
