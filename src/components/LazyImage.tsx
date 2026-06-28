@@ -35,7 +35,10 @@ export function LazyImage({ src, alt, className }: Props) {
       className={`relative overflow-hidden bg-[var(--brand-cream)] ${className ?? ""}`}
     >
       {!loaded && (
-        <div className="absolute inset-0 animate-pulse bg-gradient-to-br from-[var(--brand-cream)] via-white to-[var(--brand-cream)]" />
+        <div
+          className="w-full animate-pulse bg-gradient-to-br from-[var(--brand-cream)] via-white to-[var(--brand-cream)]"
+          style={{ aspectRatio: "4 / 5" }}
+        />
       )}
       {inView && (
         <img
@@ -45,8 +48,8 @@ export function LazyImage({ src, alt, className }: Props) {
           decoding="async"
           referrerPolicy="no-referrer"
           onLoad={() => setLoaded(true)}
-          className={`h-full w-full object-cover transition-all duration-1000 ease-out ${
-            loaded ? "opacity-100 scale-100" : "opacity-0 scale-105"
+          className={`block w-full h-auto transition-all duration-1000 ease-out ${
+            loaded ? "opacity-100 scale-100 static" : "opacity-0 scale-105 absolute inset-0"
           } group-hover:scale-[1.04]`}
         />
       )}
