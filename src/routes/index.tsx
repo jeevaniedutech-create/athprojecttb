@@ -318,7 +318,6 @@ function Home() {
                 time, by hand.
               </p>
             </div>
-            </div>
           </div>
 
           {loading ? (
