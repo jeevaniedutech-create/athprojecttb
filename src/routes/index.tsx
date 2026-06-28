@@ -19,12 +19,13 @@ export const Route = createFileRoute("/")({
   component: Home,
 });
 
-const PAGE = 12;
+const PAGE = 5;
 
 function Home() {
   const [images, setImages] = useState<ImageRow[]>([]);
   const [loading, setLoading] = useState(true);
   const [visible, setVisible] = useState(PAGE);
+  const [viewMoreLoading, setViewMoreLoading] = useState(false);
 
   useEffect(() => {
     let active = true;
