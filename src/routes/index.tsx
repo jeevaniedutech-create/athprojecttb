@@ -321,11 +321,12 @@ function Home() {
           </div>
 
           {loading ? (
-            <div className="mt-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+            <div className="mt-16 columns-2 md:columns-3 lg:columns-4 gap-3 [column-fill:_balance]">
               {Array.from({ length: 8 }).map((_, i) => (
                 <div
                   key={i}
-                  className="aspect-[4/5] animate-pulse bg-[var(--brand-paper)]"
+                  className="mb-3 break-inside-avoid animate-pulse bg-[var(--brand-paper)]"
+                  style={{ height: 220 + ((i * 47) % 180) }}
                 />
               ))}
             </div>
@@ -337,16 +338,16 @@ function Home() {
             </div>
           ) : (
             <>
-              <div className="mt-14 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+              <div className="mt-14 columns-2 md:columns-3 lg:columns-4 gap-3 [column-fill:_balance]">
                 {shown.map((img) => (
                   <figure
                     key={img.id}
-                    className="group relative overflow-hidden aspect-[4/5] shadow-card"
+                    className="group relative mb-3 break-inside-avoid overflow-hidden shadow-card"
                   >
                     <LazyImage
                       src={normalizeImageUrl(img.url)}
                       alt={img.title ?? `Athijeevana moment ${img.position}`}
-                      className="h-full w-full"
+                      className="w-full"
                     />
                     <div className="absolute top-3 left-3 px-2 py-0.5 text-[10px] tracking-[0.2em] font-mono bg-white/85 text-[var(--brand-ink)] backdrop-blur">
                       {String(img.position).padStart(3, "0")}
