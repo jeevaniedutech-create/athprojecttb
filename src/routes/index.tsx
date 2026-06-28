@@ -63,15 +63,18 @@ function Home() {
               <em className="text-gradient-brand not-italic font-medium">ATHIJEEVANA.</em>
             </h1>
             <p className="mt-8 max-w-xl text-[1.05rem] leading-relaxed text-[var(--brand-ink-soft)]">
-              A community mental health initiative launched by Jeevani Institute of
-              Mind Care — with the vision of promoting mental well-being and providing
-              accessible psychological support to individuals in need.
+              ATHIJEEVANA is a community mental health initiative launched by
+              Jeevani Institute of Mind Care with the vision of promoting mental
+              well-being and providing accessible psychological support to individuals
+              in need. We work across communities in Kerala, bringing professional
+              care closer to the people who need it most.
             </p>
             <p className="mt-5 max-w-xl text-[1.05rem] leading-relaxed text-[var(--brand-ink-soft)]">
               Our mission is to ensure that quality mental health care reaches everyone,
               especially those who face financial difficulties or lack access to
-              professional counselling services. We believe every individual deserves
-              emotional support, hope, and the opportunity to lead a healthy, meaningful life.
+              professional counselling services. We believe that every individual deserves
+              emotional support, hope, and the opportunity to lead a healthy and
+              meaningful life.
             </p>
             <div className="mt-10 flex flex-wrap gap-3">
               <a
