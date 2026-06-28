@@ -83,7 +83,7 @@ export function SiteFooter() {
       <div className="border-t border-[color:rgba(14,42,56,0.08)]">
         <div className="mx-auto max-w-7xl px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[var(--brand-ink-soft)]">
           <p>© {new Date().getFullYear()} Athijeevana. All rights reserved.</p>
-          <p className="tracking-[0.2em] uppercase">Heal · Rise · Live</p>
+          <p className="tracking-[0.2em] uppercase">Strength for the Mind · Resilience for Life</p>
         </div>
       </div>
     </footer>
