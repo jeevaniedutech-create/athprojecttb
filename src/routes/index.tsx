@@ -240,9 +240,9 @@ function Home() {
           </div>
           <div className="mt-14 grid md:grid-cols-3 gap-px bg-[color:rgba(14,42,56,0.08)] border border-[color:rgba(14,42,56,0.08)]">
             {[
-              ["01", "Official Membership Card", "A formal identification card recognising you as a member of the ATHIJEEVANA community."],
-              ["02", "Community Participation", "Opportunities to participate in community mental health initiatives across Kerala."],
-              ["03", "Professional Network", "Professional networking and meaningful social service experience alongside committed peers."],
+              ["01", "Official Membership Card", "A formal identification card recognising you as a member of the ATHIJEEVANA community. It serves as a symbol of your commitment to mental health awareness and social care."],
+              ["02", "Community Participation", "Opportunities to participate in community mental health initiatives across Kerala. Members are invited to join awareness drives, workshops, and outreach activities that create lasting impact."],
+              ["03", "Professional Network", "Professional networking and meaningful social service experience alongside committed peers. Build connections with counsellors, psychologists, social workers, and volunteers who share your values."],
             ].map(([n, t, d]) => (
               <div key={t} className="bg-white p-10">
                 <div className="font-display text-5xl text-[var(--brand-teal-deep)] opacity-30">{n}</div>
