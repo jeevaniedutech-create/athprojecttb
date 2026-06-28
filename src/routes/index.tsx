@@ -8,11 +8,11 @@ import logoAsset from "@/assets/athijeevana-logo.png.asset.json";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Athijeevana — Heal · Rise · Live" },
+      { title: "Athijeevana — Community Mental Health Initiative by Jeevani Institute of Mind Care" },
       {
         name: "description",
         content:
-          "Athijeevana is a community mental health and free counselling programme dedicated to healing, rising, and living fully.",
+          "Athijeevana is a community mental health initiative by Jeevani Institute of Mind Care offering free counselling, awareness and support — Strength for the Mind, Resilience for Life.",
       },
     ],
   }),
