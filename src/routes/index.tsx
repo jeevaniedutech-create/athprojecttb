@@ -46,6 +46,15 @@ function Home() {
 
   const shown = useMemo(() => images.slice(0, visible), [images, visible]);
 
+  const handleViewMore = () => {
+    if (viewMoreLoading || visible >= images.length) return;
+    setViewMoreLoading(true);
+    setTimeout(() => {
+      setVisible((v) => v + PAGE);
+      setViewMoreLoading(false);
+    }, 3000);
+  };
+
   return (
     <div className="min-h-screen bg-[var(--brand-cream)]">
       <SiteHeader />
