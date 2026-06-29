@@ -4,12 +4,10 @@ import tailwindcss from "@tailwindcss/vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 import { tanstackRouter } from "@tanstack/router-plugin/vite";
 
-// Base path for GitHub Pages deployment under `/athprojecttb/`.
-// Override with VITE_BASE=/ for Netlify, Cloudflare Pages, Firebase, etc.
-const base = process.env.VITE_BASE ?? "/athprojecttb/";
-
-export default defineConfig({
-  base,
+// Build for GitHub Pages under `/athprojecttb/` by default.
+// Dev stays at `/` so direct routes like `/verify` never show a Vite 404.
+export default defineConfig(({ command }) => ({
+  base: command === "build" ? (process.env.VITE_BASE ?? "/athprojecttb/") : "/",
   plugins: [
     tsconfigPaths(),
     tanstackRouter({ target: "react", autoCodeSplitting: true }),
@@ -25,4 +23,4 @@ export default defineConfig({
     outDir: "dist",
     sourcemap: false,
   },
-});
+}));

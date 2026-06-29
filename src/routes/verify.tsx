@@ -3,6 +3,11 @@ import { useState } from "react";
 import { supabase, type MemberRow } from "@/lib/supabase";
 import { SiteHeader, SiteFooter } from "@/components/SiteHeader";
 
+const homeHref =
+  typeof window !== "undefined" && window.location.pathname.startsWith("/athprojecttb")
+    ? "/athprojecttb/"
+    : import.meta.env.BASE_URL || "/";
+
 export const Route = createFileRoute("/verify")({
   head: () => ({
     meta: [
@@ -141,7 +146,7 @@ function Verify() {
 
         <p className="mt-10 text-center text-sm text-muted-foreground">
           Don't have a code yet?{" "}
-          <a href="/" className="text-[var(--brand-teal-deep)] underline">
+          <a href={homeHref} className="text-[var(--brand-teal-deep)] underline">
             Learn about Athijeevana
           </a>
           .

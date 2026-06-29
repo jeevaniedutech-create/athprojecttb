@@ -2,8 +2,13 @@ import { QueryClient } from "@tanstack/react-query";
 import { createRouter, createHashHistory } from "@tanstack/react-router";
 import { routeTree } from "./routeTree.gen";
 
-// Use base path matching Vite's base (default GitHub Pages repo path).
-const basepath = (import.meta.env.BASE_URL || "/").replace(/\/$/, "") || "/";
+// Support both root-hosted previews and GitHub Pages under `/athprojecttb/`.
+const configuredBasepath =
+  (import.meta.env.BASE_URL || "/").replace(/\/$/, "") || "/";
+const runtimeBasepath =
+  typeof window !== "undefined" && window.location.pathname.startsWith("/athprojecttb")
+    ? "/athprojecttb"
+    : configuredBasepath;
 
 export const getRouter = () => {
   const queryClient = new QueryClient();
@@ -11,7 +16,7 @@ export const getRouter = () => {
   const router = createRouter({
     routeTree,
     context: { queryClient },
-    basepath: basepath === "/" ? undefined : basepath,
+    basepath: runtimeBasepath === "/" ? undefined : runtimeBasepath,
     scrollRestoration: true,
     defaultPreloadStaleTime: 0,
   });
