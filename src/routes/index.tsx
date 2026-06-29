@@ -3,7 +3,7 @@ import { useEffect, useMemo, useState } from "react";
 import { supabase, type ImageRow, normalizeImageUrl } from "@/lib/supabase";
 import { SiteHeader, SiteFooter } from "@/components/SiteHeader";
 import { LazyImage } from "@/components/LazyImage";
-import logoAsset from "@/assets/athijeevana-logo.png.asset.json";
+import logoAsset from "@/assets/athijeevana-logo";
 
 export const Route = createFileRoute("/")({
   head: () => ({
