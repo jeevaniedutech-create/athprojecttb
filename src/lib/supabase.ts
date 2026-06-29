@@ -1,13 +1,11 @@
 import { createClient } from "@supabase/supabase-js";
 
-const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL as string;
-const SUPABASE_ANON_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY as string;
-
-if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
-  throw new Error(
-    "Missing VITE_SUPABASE_URL or VITE_SUPABASE_ANON_KEY. Set them in your .env.local file.",
-  );
-}
+const SUPABASE_URL =
+  (import.meta.env.VITE_SUPABASE_URL as string) ||
+  "https://hdebckeapvfvnlkcpcnm.supabase.co";
+const SUPABASE_ANON_KEY =
+  (import.meta.env.VITE_SUPABASE_ANON_KEY as string) ||
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhkZWJja2VhcHZmdm5sa2NwY25tIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODIyOTk5MTMsImV4cCI6MjA5Nzg3NTkxM30.MEFaY_XMPDNuSqlIU4jBCetN1HCfE8Mwlo7Q5vQB2zQ";
 
 export const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
   auth: { persistSession: false, autoRefreshToken: false },
