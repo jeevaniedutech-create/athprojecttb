@@ -1,6 +1,13 @@
 import { Link } from "@tanstack/react-router";
 import logoAsset from "@/assets/athijeevana-logo";
 
+const appBase =
+  typeof window !== "undefined" && window.location.pathname.startsWith("/athprojecttb")
+    ? "/athprojecttb/"
+    : import.meta.env.BASE_URL;
+const homeHref = appBase || "/";
+const sectionHref = (hash: string) => `${homeHref.replace(/\/$/, "/")}${hash}`;
+
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 backdrop-blur-xl bg-[rgba(250,246,239,0.78)] border-b border-[color:rgba(14,42,56,0.08)]">
@@ -24,13 +31,13 @@ export function SiteHeader() {
             Home
           </Link>
           <a
-            href="/#programmes"
+            href={sectionHref("#programmes")}
             className="hidden sm:inline-block px-3 py-2 rounded-full text-[var(--brand-ink-soft)] hover:text-[var(--brand-ink)] transition"
           >
             Programmes
           </a>
           <a
-            href="/#works"
+            href={sectionHref("#works")}
             className="hidden sm:inline-block px-3 py-2 rounded-full text-[var(--brand-ink-soft)] hover:text-[var(--brand-ink)] transition"
           >
             Works
@@ -67,10 +74,10 @@ export function SiteFooter() {
         <div>
           <p className="eyebrow">Explore</p>
           <ul className="mt-4 space-y-2 text-sm text-[var(--brand-ink-soft)]">
-            <li><a href="/#about" className="hover:text-[var(--brand-ink)]">About</a></li>
-            <li><a href="/#programmes" className="hover:text-[var(--brand-ink)]">Programmes</a></li>
-            <li><a href="/#works" className="hover:text-[var(--brand-ink)]">Works</a></li>
-            <li><a href="/#contact" className="hover:text-[var(--brand-ink)]">Contact</a></li>
+            <li><a href={sectionHref("#about")} className="hover:text-[var(--brand-ink)]">About</a></li>
+            <li><a href={sectionHref("#programmes")} className="hover:text-[var(--brand-ink)]">Programmes</a></li>
+            <li><a href={sectionHref("#works")} className="hover:text-[var(--brand-ink)]">Works</a></li>
+            <li><a href={sectionHref("#contact")} className="hover:text-[var(--brand-ink)]">Contact</a></li>
           </ul>
         </div>
         <div>
