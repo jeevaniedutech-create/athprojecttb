@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import logoAsset from "@/assets/athijeevana-logo.png.asset.json";
+import logoAsset from "@/assets/athijeevana-logo";
 
 export function SiteHeader() {
   return (
