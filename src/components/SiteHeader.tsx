@@ -10,7 +10,9 @@ const sectionHref = (hash: string) => `${homeHref.replace(/\/$/, "/")}${hash}`;
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-40 backdrop-blur-xl bg-[rgba(250,246,239,0.78)] border-b border-[color:rgba(14,42,56,0.08)]">
+    <>
+      <TopBanner />
+      <header className="sticky top-0 z-40 backdrop-blur-xl bg-[rgba(250,246,239,0.78)] border-b border-[color:rgba(14,42,56,0.08)]">
       <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-3">
           <img src={logoAsset.url} alt="Athijeevana" className="h-11 w-auto" />
