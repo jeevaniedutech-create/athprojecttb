@@ -150,7 +150,3 @@
   width: max-content;
   animation: marquee 32s linear infinite;
 }
-
-@utility marquee-track:hover {
-  animation-play-state: paused;
-}
