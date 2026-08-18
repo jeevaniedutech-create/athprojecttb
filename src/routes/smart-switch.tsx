@@ -45,13 +45,28 @@ function SmartSwitch() {
   async function run() {
     setStatus("processing");
     setError("");
-    const { data, error: rpcError } = await supabase.rpc("run_smart_switch");
-    const result = data as RunResult | null;
-    if (rpcError || !result || result.status !== "success") {
+
+    const { data, error: rpcError } =
+      await supabase.rpc("run_smart_switch");
+
+    // Handle the RPC response safely whether Supabase returns
+    // the result directly or wraps it in an array.
+    const result = (
+      Array.isArray(data) ? data[0] : data
+    ) as RunResult | null;
+
+    if (rpcError) {
       setStatus("failed");
-      setError(rpcError?.message ?? "Operation did not complete.");
+      setError(rpcError.message);
       return;
     }
+
+    if (!result || result.status !== "success") {
+      setStatus("failed");
+      setError("Operation did not complete.");
+      return;
+    }
+
     setRows(result.rows_processed);
     setLastRun(result.last_run);
     setStatus("success");
@@ -95,7 +110,9 @@ function SmartSwitch() {
             <dl className="mt-4 space-y-2 text-sm">
               <div className="flex justify-between">
                 <dt className="text-muted-foreground">Rows Processed</dt>
-                <dd className="font-mono">{(rows ?? 0).toLocaleString("en-US")}</dd>
+                <dd className="font-mono">
+                  {(rows ?? 0).toLocaleString("en-US")}
+                </dd>
               </div>
               <div className="flex justify-between">
                 <dt className="text-muted-foreground">Last Run</dt>
@@ -110,7 +127,8 @@ function SmartSwitch() {
             <p className="font-medium">Run Failed</p>
             <p className="mt-1 text-muted-foreground break-words">{error}</p>
             <p className="mt-3 text-xs text-muted-foreground">
-              Last Run unchanged: <span className="font-mono">{formatStamp(lastRun)}</span>
+              Last Run unchanged:{" "}
+              <span className="font-mono">{formatStamp(lastRun)}</span>
             </p>
           </div>
         )}
