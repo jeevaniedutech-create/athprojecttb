@@ -28,6 +28,44 @@ function formatStamp(iso: string | null): string {
   return `${p(d.getDate())}-${p(d.getMonth() + 1)}-${d.getFullYear()} ${p(d.getHours())}:${p(d.getMinutes())}`;
 }
 
+function normalizeRunResult(data: unknown): RunResult | null {
+  let value = data;
+
+  if (Array.isArray(value)) {
+    value = value[0];
+  }
+
+  if (typeof value === "string") {
+    try {
+      value = JSON.parse(value);
+    } catch {
+      return null;
+    }
+  }
+
+  if (!value || typeof value !== "object") {
+    return null;
+  }
+
+  const result = value as Record<string, unknown>;
+
+  if (typeof result.status !== "string") {
+    return null;
+  }
+
+  return {
+    status: result.status,
+    rows_processed:
+      typeof result.rows_processed === "number"
+        ? result.rows_processed
+        : Number(result.rows_processed ?? 0),
+    last_run:
+      typeof result.last_run === "string" || result.last_run === null
+        ? result.last_run
+        : null,
+  };
+}
+
 function SmartSwitch() {
   const [status, setStatus] = useState<Status>("ready");
   const [rows, setRows] = useState<number | null>(null);
@@ -37,7 +75,7 @@ function SmartSwitch() {
   useEffect(() => {
     (async () => {
       const { data } = await supabase.rpc("smart_switch_status");
-      const r = data as RunResult | null;
+      const r = normalizeRunResult(data);
       if (r?.last_run) setLastRun(r.last_run);
     })();
   }, []);
@@ -49,19 +87,15 @@ function SmartSwitch() {
     const { data, error: rpcError } =
       await supabase.rpc("run_smart_switch");
 
-    // Handle the RPC response safely whether Supabase returns
-    // the result directly or wraps it in an array.
-    const result = (
-      Array.isArray(data) ? data[0] : data
-    ) as RunResult | null;
-
     if (rpcError) {
       setStatus("failed");
       setError(rpcError.message);
       return;
     }
 
-    if (!result || result.status !== "success") {
+    const result = normalizeRunResult(data);
+
+    if (!result || result.status.toLowerCase() !== "success") {
       setStatus("failed");
       setError("Operation did not complete.");
       return;
