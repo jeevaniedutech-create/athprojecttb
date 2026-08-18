@@ -10,12 +10,18 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as VerifyRouteImport } from './routes/verify'
+import { Route as SmartSwitchRouteImport } from './routes/smart-switch'
 import { Route as ControlPanelJeevaniRouteImport } from './routes/control-panel-jeevani'
 import { Route as IndexRouteImport } from './routes/index'
 
 const VerifyRoute = VerifyRouteImport.update({
   id: '/verify',
   path: '/verify',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SmartSwitchRoute = SmartSwitchRouteImport.update({
+  id: '/smart-switch',
+  path: '/smart-switch',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ControlPanelJeevaniRoute = ControlPanelJeevaniRouteImport.update({
@@ -32,30 +38,34 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/control-panel-jeevani': typeof ControlPanelJeevaniRoute
+  '/smart-switch': typeof SmartSwitchRoute
   '/verify': typeof VerifyRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/control-panel-jeevani': typeof ControlPanelJeevaniRoute
+  '/smart-switch': typeof SmartSwitchRoute
   '/verify': typeof VerifyRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/control-panel-jeevani': typeof ControlPanelJeevaniRoute
+  '/smart-switch': typeof SmartSwitchRoute
   '/verify': typeof VerifyRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/control-panel-jeevani' | '/verify'
+  fullPaths: '/' | '/control-panel-jeevani' | '/smart-switch' | '/verify'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/control-panel-jeevani' | '/verify'
-  id: '__root__' | '/' | '/control-panel-jeevani' | '/verify'
+  to: '/' | '/control-panel-jeevani' | '/smart-switch' | '/verify'
+  id: '__root__' | '/' | '/control-panel-jeevani' | '/smart-switch' | '/verify'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ControlPanelJeevaniRoute: typeof ControlPanelJeevaniRoute
+  SmartSwitchRoute: typeof SmartSwitchRoute
   VerifyRoute: typeof VerifyRoute
 }
 
@@ -66,6 +76,13 @@ declare module '@tanstack/react-router' {
       path: '/verify'
       fullPath: '/verify'
       preLoaderRoute: typeof VerifyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/smart-switch': {
+      id: '/smart-switch'
+      path: '/smart-switch'
+      fullPath: '/smart-switch'
+      preLoaderRoute: typeof SmartSwitchRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/control-panel-jeevani': {
@@ -88,6 +105,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ControlPanelJeevaniRoute: ControlPanelJeevaniRoute,
+  SmartSwitchRoute: SmartSwitchRoute,
   VerifyRoute: VerifyRoute,
 }
 export const routeTree = rootRouteImport
